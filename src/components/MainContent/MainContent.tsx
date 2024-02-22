@@ -1,10 +1,18 @@
+import React from "react";
 import "./MainContent.css";
 
-const MainContent = (): JSX.Element => {
+interface MainContentProps {
+  tasks: string[];
+}
+
+const MainContent: React.FC<MainContentProps> = ({ tasks }): JSX.Element => {
   return (
     <main className="main-content">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, dicta!</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, dicta!</p>
+      <ul>
+        {tasks.map((task, index) => (
+          <li key={index}>{task}</li>
+        ))}
+      </ul>
     </main>
   );
 };
