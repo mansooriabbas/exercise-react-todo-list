@@ -1,20 +1,10 @@
-import React from "react";
+
 import "./MainContent.css";
 
-interface MainContentProps {
-  tasks: string[];
-}
+const MainContent = () => {
+  return <main className="main-content">
 
-const MainContent: React.FC<MainContentProps> = ({ tasks }): JSX.Element => {
-  return (
-    <main className="main-content">
-      <ul>
-        {tasks.map((task, index) => (
-          <li key={index}>{task}</li>
-        ))}
-      </ul>
-    </main>
-  );
+  </main>;
 };
 
 export default MainContent;
