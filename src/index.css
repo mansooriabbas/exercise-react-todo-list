@@ -41,6 +41,13 @@ button {
 .move-button {
   background-color: hsl(249, 97%, 25%);
 }
+.mark-button:hover {
+  background-color: hsl(278, 100%, 44%);
+}
+.mark-button {
+  background-color: hsl(268, 95%, 24%);
+}
+
 
 .delete-button:hover {
   background-color: hsl(0, 95%, 24%);
@@ -74,8 +81,13 @@ li {
 }
 
 .delete-button,
-.move-button {
+.move-button,
+.mark-button {
   padding: 8px 12px;
   font-size: 1.4rem;
   margin-left: 10px;
 }
+
+.done {
+    text-decoration: line-through;
+  }

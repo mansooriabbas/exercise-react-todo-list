@@ -10,11 +10,11 @@ Below you have a couple of User Stories that are going to follow.
 
 <!-- - As user I want to be able to add new todos to my todo list so I can update my todo list when I find something else that I need to do. -->
 
-- As a user I want to mark a todo as completed so I can see which todos I have left to do.
+<!-- - As a user I want to mark a todo as completed so I can see which todos I have left to do. -->
 
 <!-- - As a user I want to remove a todo from the list so I can keep my list as clean and short as possible. -->
 
-- As a user I want to be able to move todos up and down in order to prioritize what I have to do.
+<!-- - As a user I want to be able to move todos up and down in order to prioritize what I have to do. -->
 
 <!-- - As a user I want everything on my todo list on the same page because I don't want to navigate between pages and to get a good overview of everything. -->
 

@@ -1,30 +1,28 @@
 import React, { useState } from "react";
 
 const ToDoList = () => {
-  const [tasks, setTasks] = useState([
-    "Get the paper",
-    "Buy that thing",
-    "Buy the other thing",
-  ]);
-  const [newTask, setNewTask] = useState("");
+  const [tasks, setTasks] = useState<{ text: string; done: boolean }[]>([]);
+  const [newTask, setNewTask] = useState<string>("");
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: {
+    target: { value: React.SetStateAction<string> };
+  }) => {
     setNewTask(e.target.value);
   };
 
   const addTask = () => {
     if (newTask.trim() !== "") {
-      setTasks((t) => [...t, newTask]);
+      setTasks((t) => [...t, { text: newTask, done: false }]);
       setNewTask("");
     }
   };
 
-  const deleteTask = (index) => {
+  const deleteTask = (index: number) => {
     const updatedTasks = tasks.filter((_, i) => i !== index);
     setTasks(updatedTasks);
   };
 
-  const MoveTaskUp = (index: number) => {
+  const moveTaskUp = (index: number) => {
     const updatedTasks = [...tasks];
     if (index > 0) {
       [updatedTasks[index], updatedTasks[index - 1]] = [
@@ -35,7 +33,7 @@ const ToDoList = () => {
     }
   };
 
-  const MoveTaskDown = (index: number) => {
+  const moveTaskDown = (index: number) => {
     const updatedTasks = [...tasks];
     if (index < tasks.length - 1) {
       [updatedTasks[index], updatedTasks[index + 1]] = [
@@ -44,6 +42,13 @@ const ToDoList = () => {
       ];
       setTasks(updatedTasks);
     }
+  };
+
+  const markTaskDone = (index: number) => {
+    const updatedTasks = tasks.map((task, i) =>
+      i === index ? { ...task, done: !task.done } : task
+    );
+    setTasks(updatedTasks);
   };
 
   return (
@@ -63,15 +68,20 @@ const ToDoList = () => {
       <ol>
         {tasks.map((task, i) => (
           <li key={i}>
-            <span className="text">{task}</span>
+            <span className={task.done ? "text done" : "text"}>
+              {task.text}
+            </span>
             <button className="delete-button" onClick={() => deleteTask(i)}>
               Delete
             </button>
-            <button className="move-button" onClick={() => MoveTaskUp(i)}>
+            <button className="move-button" onClick={() => moveTaskUp(i)}>
               UP
             </button>
-            <button className="move-button" onClick={() => MoveTaskDown(i)}>
+            <button className="move-button" onClick={() => moveTaskDown(i)}>
               DOWN
+            </button>
+            <button className="mark-button" onClick={() => markTaskDone(i)}>
+              DONE
             </button>
           </li>
         ))}
