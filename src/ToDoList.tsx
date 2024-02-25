@@ -12,7 +12,12 @@ const ToDoList = () => {
     setNewTask(e.target.value);
   };
 
-  const addTask = () => {};
+  const addTask = () => {
+    if (newTask.trim() !== "") {
+      setTasks((t) => [...t, newTask]);
+      setNewTask("");
+    }
+  };
 
   const deleteTask = (index) => {};
 

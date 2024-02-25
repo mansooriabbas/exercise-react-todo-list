@@ -1,3 +1,7 @@
+body {
+  background-color: hsla(250, 100%, 11%, 0.884);
+}
+
 .to-do-list {
   font-family: Arial, sans-serif;
   text-align: center;
