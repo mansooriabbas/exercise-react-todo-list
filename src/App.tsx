@@ -1,18 +1,9 @@
-import MainContent from "./components/MainContent/MainContent";
-import Nav from "./components/Nav/Nav";
-
-
-
+import ToDoList from "./ToDoList";
 
 const App = () => {
-  
-
- 
-
   return (
-    <div>
-      <Nav  />
-      <MainContent />
+    <div className="App">
+      <ToDoList />
     </div>
   );
 };
