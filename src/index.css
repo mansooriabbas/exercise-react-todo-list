@@ -1,98 +1,153 @@
 body {
-    background-color: hsla(250, 100%, 11%, 0.884);
-  }
+  background-color: #2b003b;
+  color: #d3bea4;
+}
+
+.to-do-list {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+h1 {
+  font-size: 5rem;
+  font-family: "Lobster", sans-serif;
+  font-weight: 900;
+  font-style: normal;
   
-  .to-do-list {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin-top: 50px;
-  }
-  
-  h1 {
-    font-size: 3rem;
-    color: white;
-  }
-  
-  button {
-    font-size: 1.4rem;
-    font-weight: bold;
-    padding: 8px 16px;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.5s ease;
-  }
-  
-  .add-button {
-    background-color: hsl(125, 50%, 50%);
-  }
-  
-  .add-button:hover {
-    background-color: hsl(125, 50%, 40%);
-  }
-  
-  .delete-button {
-    background-color: hsl(0, 78%, 45%);
-  }
-  
-  .move-button:hover {
-    background-color: hsl(251, 100%, 44%);
-  }
-  
-  .move-button {
-    background-color: hsl(249, 97%, 25%);
-  }
-  
-  .mark-button:hover {
-    background-color: hsl(278, 100%, 44%);
-  }
-  
-  .mark-button {
-    background-color: hsl(268, 95%, 24%);
-  }
-  
-  .delete-button:hover {
-    background-color: hsl(0, 95%, 24%);
-  }
-  
-  input[type="text"] {
-    font-size: 1.2rem;
-    padding: 8px;
-    border: 2px solid hsl(0, 0%, 80%, 0.5);
-    border-radius: 5px;
-    color: hsla(0, 0%, 0%, 0.5);
-  }
-  
-  ol {
-    padding: 0;
-  }
-  
-  li {
-    font-size: 1.8rem;
-    font-weight: bold;
-    padding: 10px;
-    background-color: hsl(0, 0%, 90%);
-    margin-bottom: 5px;
-    border: 2px solid hsla(0 0%, 85%, 0.75);
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .text {
-    flex: 1;
-  }
-  
-  .delete-button,
-  .move-button,
-  .mark-button {
-    padding: 6px 10px;
-    font-size: 1.2rem;
-    margin-left: 5px;
-  }
-  
-  .done {
-    text-decoration: line-through;
-  }
-  
+ 
+  color: #b8860b;
+}
+
+.feather {
+  font-size: 5rem;
+  color: #b8860b;
+}
+button {
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 8px 16px;
+  color: #d3bea4;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.add-button {
+  background-color: #b8860b;
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  color: #2b003b;
+}
+
+.add-button:hover {
+  background-color: #e9ac11;
+}
+
+.delete-button {
+  background-color: #7e3636;
+}
+
+.delete-button:hover {
+  background-color: #9b4747;
+}
+
+.move-button {
+  background-color: #3f3f3f;
+}
+
+.move-button:hover {
+  background-color: #333;
+}
+
+.mark-button {
+  background-color: #416d43;
+}
+
+.mark-button:hover {
+  background-color: #508553;
+}
+
+.edit-button {
+  background-color: #243f52;
+}
+
+.edit-button:hover {
+  background-color: #345c79;
+}
+
+input[type="text"] {
+  font-family: "Lobster", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.3rem;
+  padding: 9px;
+  border: none;
+  border-radius: 5px;
+  color: #411750;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border: px solid rgba(0, 0, 0, 0);
+}
+
+/* Add a border only when focused */
+input[type="text"]:focus {
+  outline: none;
+}
+
+ol {
+  padding: 0;
+}
+
+li {
+  font-size: 1.5rem;
+  font-family: "Lobster", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: 1rem;
+  background-color: #d3bea4;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  color: #2b003b;
+  width: 90%;
+  margin: 0 auto;
+  gap: 0.1rem;
+  margin-top: 0.5rem;
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.288);
+}
+
+.text {
+  flex: 1;
+}
+
+.delete-button,
+.move-button,
+.mark-button,
+.edit-button {
+  padding: 6px 10px;
+  font-size: 1.2rem;
+  margin-left: 5px;
+}
+
+.done {
+  text-decoration: line-through;
+  text-decoration-color: #416d43;
+}
