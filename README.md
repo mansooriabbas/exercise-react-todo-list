@@ -32,12 +32,4 @@ Taskmaster is a simple and elegant todo app built with React, Vite, and TypeScri
 
 Check out the live preview of Taskmaster: [Taskmaster Live Preview](https://mansooriabbas.github.io/exercise-react-todo-list/)
 
-## Contributing
-
-Contributions are welcome! If you have any suggestions, bug reports, or feature requests, please create an issue or submit a pull request.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute the code as needed.
-
 Happy task managing with Taskmaster! 🚀✨
