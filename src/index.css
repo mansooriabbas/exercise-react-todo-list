@@ -21,8 +21,7 @@ h1 {
   font-family: "Lobster", sans-serif;
   font-weight: 900;
   font-style: normal;
-  
- 
+
   color: #b8860b;
 }
 
@@ -126,12 +125,12 @@ li {
   display: flex;
   align-items: center;
   color: #2b003b;
-  width: 90%;
+
   margin: 0 auto;
   gap: 0.1rem;
   margin-top: 0.5rem;
-
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.288);
+  
 }
 
 .text {

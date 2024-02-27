@@ -62,34 +62,37 @@ const ToDoList = () => {
   return (
     <div className="to-do-list">
       <div className="title-container">
-        <h1>Task Master </h1>
+        <h1>Task Master</h1>
       </div>
 
-      <div className="input-container">
-        <input
-          type="text"
-          placeholder="Enter a task..."
-          value={newTask}
-          onChange={(e) => setNewTask(e.target.value)}
-        />
-        <button className="add-button" onClick={addTask}>
-          <span className="material-symbols-outlined">add_task</span>
-        </button>
-      </div>
+      <form onSubmit={(e) => { e.preventDefault(); addTask(); }}>
+        <div className="input-container">
+          <input
+            type="text"
+            placeholder="Enter a task..."
+            value={newTask}
+            onChange={(e) => setNewTask(e.target.value)}
+          />
+          <button className="add-button" type="submit">
+            <span className="material-symbols-outlined">add_task</span>
+          </button>
+        </div>
+      </form>
+
       <ol>
         {tasks.map((task, i) => (
           <li key={i}>
-            {isEditing === i && (
+            {isEditing === i ? (
               <input
                 onChange={(e) => handleInputChange(e, i)}
                 value={task.text}
                 type="text"
               />
+            ) : (
+              <span className={task.done ? "text done" : "text"}>
+                {task.text}
+              </span>
             )}
-
-            <span className={task.done ? "text done" : "text"}>
-              {task.text}
-            </span>
 
             <button className="delete-button" onClick={() => deleteTask(i)}>
               <span className="material-symbols-outlined">delete</span>
